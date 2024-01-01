@@ -31,3 +31,14 @@ var getIntersectionNode = function (headA, headB) {
 
   return null;
 };
+
+var getIntersectionNode2 = function (headA, headB) {
+  let a = headA,
+    b = headB;
+  while (a !== b) {
+    console.log(`${a}: ${!a}, ${b}: ${!b}`);
+    a = !a ? headB : a.next;
+    b = !b ? headA : b.next;
+  }
+  return a;
+};
